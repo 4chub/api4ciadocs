@@ -257,7 +257,7 @@ Formato `application/json`:
       "string"
     ]
   }
-```
+  ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
   ```json
@@ -283,7 +283,7 @@ Formato `application/json`:
     "additionalProp2": "string",
     "additionalProp3": "string"
   }
-```
+  ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
 
@@ -339,7 +339,7 @@ Formato `application/json`:
     "additionalProp2": "string",
     "additionalProp3": "string"
   }
-```
+  ```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
   ```json
