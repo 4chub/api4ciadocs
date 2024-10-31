@@ -151,3 +151,60 @@ O corpo da requisição deve ser enviado no formato `application/json`. A estrut
     }
   ]
 }
+
+
+## Respostas
+
+A API fornece diferentes respostas com base no resultado da solicitação:
+
+- **200 OK**: Solicitação bem-sucedida.
+  ```json
+  {
+    "type": "string",
+    "title": "string",
+    "status": 0,
+    "detail": "string",
+    "instance": "string",
+    "additionalProp1": "string",
+    "additionalProp2": "string",
+    "additionalProp3": "string"
+  }
+
+- **400 Bad Request**: Ocorreu uma falha na solicitação.
+  ```json
+  {
+    "type": "string",
+    "title": "string",
+    "status": 0,
+    "detail": "string",
+    "instance": "string",
+    "additionalProp1": "string",
+    "additionalProp2": "string",
+    "additionalProp3": "string"
+  }
+
+- **401 Unauthorized**: Usuário não autenticado ou sem permissões suficientes.
+  ```json
+  {
+    "type": "string",
+    "title": "string",
+    "status": 0,
+    "detail": "string",
+    "instance": "string",
+    "additionalProp1": "string",
+    "additionalProp2": "string",
+    "additionalProp3": "string"
+  }
+
+- **403 Forbidden**: Acesso ao recurso é proibido.
+
+---
+
+### Observações Adicionais
+
+- **Formato de Data**: Utilize o formato de data `YYYY-MM-DD` conforme o exemplo.
+- **Tipos de Dados**: Campos como `emailConfirmed`, `phoneNumberConfirmed` e `temporaryPassword` são booleanos (`true` ou `false`).
+
+### Uso e Integração
+
+A API é ideal para sistemas que necessitam de envio massivo ou específico de mensagens avulsas, como campanhas de marketing, atualizações de status de serviço, ou comunicações operacionais com clientes e parceiros.
