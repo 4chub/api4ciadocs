@@ -173,7 +173,7 @@ Formato `application/json`:
   ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
-  ```json
+```json
   {
     "type": "string",
     "title": "string",
