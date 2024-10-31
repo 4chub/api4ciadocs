@@ -4,6 +4,9 @@ Esta documentação detalha os endpoints da API relacionados a login e envio de 
 
 ---
 
+
+
+
 ## Endpoint de Login
 
 ### **POST** `/api/Login`
@@ -40,6 +43,9 @@ Formato `application/json`:
 - **400 Bad Request**: Falha na autenticação.
 
 ---
+
+
+
 
 ## Endpoint de Envio de Email
 
@@ -133,6 +139,9 @@ Formato `application/json`:
 
 ---
 
+
+
+
 ## Endpoint de Relatório de Campanha
 
 ### **GET** `/api/Email/Relatorio/Pagina/{page}`
@@ -201,6 +210,10 @@ Formato `application/json`:
   ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
+
+---
+
+
 
 
 ## Endpoint de Envio de SMS
@@ -289,6 +302,9 @@ Formato `application/json`:
 
 ---
 
+
+
+
 ## Endpoint de Relatório de Campanha de SMS
 
 ### **GET** `/api/SMS/Relatorio/Pagina/{page}`
@@ -356,6 +372,9 @@ Formato `application/json`:
   ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
+
+---
+
 
 
 ## Endpoint de Envio de Mensagem Avulsa
