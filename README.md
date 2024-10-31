@@ -243,7 +243,7 @@ Formato `application/json`:
     }
   ]
 }
-]]]
+```
 
 ### Respostas
 
@@ -269,7 +269,7 @@ Formato `application/json`:
       "string"
     ]
   }
-```
+  ```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
   ```json
@@ -326,8 +326,7 @@ Formato `application/json`:
       }
     ]
   }
-```
-
+  ```
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
   ```json
   {
