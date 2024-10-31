@@ -151,7 +151,7 @@ O corpo da requisição deve ser enviado no formato `application/json`. A estrut
     }
   ]
 }
-
+```
 
 ## Respostas
 
@@ -169,6 +169,7 @@ A API fornece diferentes respostas com base no resultado da solicitação:
     "additionalProp2": "string",
     "additionalProp3": "string"
   }
+
 
 - **400 Bad Request**: Ocorreu uma falha na solicitação.
   ```json
