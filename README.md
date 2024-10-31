@@ -1,6 +1,6 @@
 # Documentação da API - Email
 
-Esta documentação detalha os endpoints da API relacionados a login e envio de campanhas de e-mail. Todas as informações foram extraídas do documento fornecido.
+Esta documentação detalha os endpoints da API relacionados a login e envio de campanhas de e-mail.
 
 ---
 
