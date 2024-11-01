@@ -150,15 +150,15 @@ Formato `application/json`:
 
 ### Parâmetros
 
-| **Nome**            | **Descrição**                          | **Tipo**      | **Local**  |
-|---------------------|----------------------------------------|---------------|------------|
-| `page`              | Página buscada                         | `integer`     | (path)     |
-| `pageSize`          | Quantidade de dados retornados         | `integer`     | (query)    |
-| `campaigncustomId`  | customid da campanha (Opcional)        | `string`      | (query)    |
-| `msgcustomId`       | customid da mensagem (Opcional)        | `string`      | (query)    |
-| `nomeCampanha`      | Nome da campanha (Opcional)            | `string`      | (query)    |
-| `dataInicial`       | Data Inicial do Envio (Opcional)       | `string`      | (query)    |
-| `dataFinal`         | Data Final do Envio (Opcional)         | `string`      | (query)    |
+| **Nome**            | **Descrição**                                           | **Tipo**      | **Local**  |
+|---------------------|---------------------------------------------------------|---------------|------------|
+| `page`              | Página buscada                                          | `integer`     | (path)     |
+| `pageSize`          | Quantidade de dados retornados (Opcional, padrão: 1000) | `integer`     | (query)    |
+| `campaigncustomId`  | customid da campanha (Opcional)                         | `string`      | (query)    |
+| `msgcustomId`       | customid da mensagem (Opcional)                         | `string`      | (query)    |
+| `nomeCampanha`      | Nome da campanha (Opcional)                             | `string`      | (query)    |
+| `dataInicial`       | Data Inicial do Envio (Opcional)                        | `string`      | (query)    |
+| `dataFinal`         | Data Final do Envio (Opcional)                          | `string`      | (query)    |
 
 ### Respostas
 
@@ -311,15 +311,15 @@ Formato `application/json`:
 
 ### Parâmetros
 
-| **Nome**            | **Descrição**                          | **Tipo**      | **Local**  |
-|---------------------|----------------------------------------|---------------|------------|
-| `page`              | Página buscada                         | `integer`     | (path)     |
-| `pageSize`          | Quantidade de dados retornados         | `integer`     | (query)    |
-| `campaigncustomId`  | customid da campanha (Opcional)        | `string`      | (query)    |
-| `msgcustomId`       | customid da mensagem (Opcional)        | `string`      | (query)    |
-| `nomeCampanha`      | Nome da campanha (Opcional)            | `string`      | (query)    |
-| `dataInicial`       | Data Inicial do Envio (Opcional)       | `string`      | (query)    |
-| `dataFinal`         | Data Final do Envio (Opcional)         | `string`      | (query)    |
+| **Nome**            | **Descrição**                                           | **Tipo**      | **Local**  |
+|---------------------|---------------------------------------------------------|---------------|------------|
+| `page`              | Página buscada                                          | `integer`     | (path)     |
+| `pageSize`          | Quantidade de dados retornados (Opcional, padrão: 1000) | `integer`     | (query)    |
+| `campaigncustomId`  | customid da campanha (Opcional)                         | `string`      | (query)    |
+| `msgcustomId`       | customid da mensagem (Opcional)                         | `string`      | (query)    |
+| `nomeCampanha`      | Nome da campanha (Opcional)                             | `string`      | (query)    |
+| `dataInicial`       | Data Inicial do Envio (Opcional)                        | `string`      | (query)    |
+| `dataFinal`         | Data Final do Envio (Opcional)                          | `string`      | (query)    |
 
 ### Respostas
 
@@ -484,15 +484,15 @@ Formato `application/json`:
 
 ### Parâmetros
 
-| **Nome**            | **Descrição**                          | **Tipo**      | **Local**  |
-|---------------------|----------------------------------------|---------------|------------|
-| `page`              | Página buscada                         | `integer`     | (path)     |
-| `pageSize`          | Quantidade de dados retornados         | `integer`     | (query)    |
-| `campaigncustomId`  | customid da campanha (Opcional)        | `string`      | (query)    |
-| `msgcustomId`       | customid da mensagem (Opcional)        | `string`      | (query)    |
-| `nomeCampanha`      | Nome da campanha (Opcional)            | `string`      | (query)    |
-| `dataInicial`       | Data Inicial do Envio (Opcional)       | `string`      | (query)    |
-| `dataFinal`         | Data Final do Envio (Opcional)         | `string`      | (query)    |
+| **Nome**            | **Descrição**                                           | **Tipo**      | **Local**  |
+|---------------------|---------------------------------------------------------|---------------|------------|
+| `page`              | Página buscada                                          | `integer`     | (path)     |
+| `pageSize`          | Quantidade de dados retornados (Opcional, padrão: 1000) | `integer`     | (query)    |
+| `campaigncustomId`  | customid da campanha (Opcional)                         | `string`      | (query)    |
+| `msgcustomId`       | customid da mensagem (Opcional)                         | `string`      | (query)    |
+| `nomeCampanha`      | Nome da campanha (Opcional)                             | `string`      | (query)    |
+| `dataInicial`       | Data Inicial do Envio (Opcional)                        | `string`      | (query)    |
+| `dataFinal`         | Data Final do Envio (Opcional)                          | `string`      | (query)    ||
 
 ### Respostas
 
