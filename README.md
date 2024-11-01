@@ -1,4 +1,4 @@
-# Documentação da API - Email
+# Documentação da API - 4Cia
 
 Esta documentação detalha os endpoints da API relacionados a login e envio de campanhas de e-mail.
 
