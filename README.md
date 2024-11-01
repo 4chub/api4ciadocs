@@ -388,7 +388,7 @@ Formato `application/json`:
 |---------------------|----------------------------------------|---------------|
 | `customId`          | Id Customizado para identificação      | Não           |
 | `nome`              | Nome da Campanha                       | Sim           |
-| `TelefoneRemetente` | Telefone do remetente da mensagem      | Sim           |
+| `remetente`         | Telefone do remetente da mensagem      | Sim           |
 | `mensagens`         | Lista de Mensagens a serem enviadas    | Sim           |
 
 ### Propriedades das Mensagens
@@ -415,7 +415,7 @@ Formato `application/json`:
 {
   "customId": "string",
   "nome": "string",
-  "TelefoneRemetente": "string",
+  "remetente": "string",
   "mensagens": [
     {
       "customId": "string",
