@@ -152,33 +152,31 @@ Formato `application/json`:
 
 | **Nome**            | **Descrição**                          | **Tipo**      | **Local**  |
 |---------------------|----------------------------------------|---------------|------------|
-| `page`              | Página buscada                        | `integer`     | (path)     |
+| `page`              | Página buscada                         | `integer`     | (path)     |
 | `pageSize`          | Quantidade de dados retornados         | `integer`     | (query)    |
-| `nomeCampanha`      | Nome da campanha (Opcional)           | `string`      | (query)    |
-| `dataInicial`       | Data Inicial do Envio (Opcional)      | `string`      | (query)    |
-| `dataFinal`         | Data Final do Envio (Opcional)        | `string`      | (query)    |
+| `campaigncustomId`  | customid da campanha (Opcional)        | `string`      | (query)    |
+| `msgcustomId`       | customid da mensagem (Opcional)        | `string`      | (query)    |
+| `nomeCampanha`      | Nome da campanha (Opcional)            | `string`      | (query)    |
+| `dataInicial`       | Data Inicial do Envio (Opcional)       | `string`      | (query)    |
+| `dataFinal`         | Data Final do Envio (Opcional)         | `string`      | (query)    |
 
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
 ```json
-  {
-    "campanhaId": 0,
-    "customId": "string",
-    "nomeCampanha": "string",
-    "status": "string",
-    "dataEnvio": "2024-10-31T19:49:24.641Z",
-    "mensagens": [
+ [
       {
-        "customId": "string",
+        "campanhaId": 0,
+        "nomeCampanha": "string",
+        "campaigncustomId": "string",
+        "msgcustomId": "string",
         "contato": "string",
         "status": "string",
         "direction": "string",
         "mensagem": "string",
         "dataEnvio": "2024-10-31T19:49:24.641Z"
       }
-    ]
-  }
+]
   ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
@@ -238,7 +236,7 @@ Formato `application/json`:
 |---------------------|----------------------------------------|---------------|
 | `customId`          | Id Customizado para identificação      | Não           |
 | `corpo`             | Mensagem a ser enviada                 | Sim           |
-| `contatoDestino`    | Endereço de E-mail do Destinatário     | Sim           |
+| `contatoDestino`    | Telefone do Destinatário               | Sim           |
 
 ### Exemplo de Corpo da Requisição
 
@@ -315,33 +313,31 @@ Formato `application/json`:
 
 | **Nome**            | **Descrição**                          | **Tipo**      | **Local**  |
 |---------------------|----------------------------------------|---------------|------------|
-| `page`              | Página buscada                        | `integer`     | (path)     |
+| `page`              | Página buscada                         | `integer`     | (path)     |
 | `pageSize`          | Quantidade de dados retornados         | `integer`     | (query)    |
-| `nomeCampanha`      | Nome da campanha (Opcional)           | `string`      | (query)    |
-| `dataInicial`       | Data Inicial do Envio (Opcional)      | `string`      | (query)    |
-| `dataFinal`         | Data Final do Envio (Opcional)        | `string`      | (query)    |
+| `campaigncustomId`  | customid da campanha (Opcional)        | `string`      | (query)    |
+| `msgcustomId`       | customid da mensagem (Opcional)        | `string`      | (query)    |
+| `nomeCampanha`      | Nome da campanha (Opcional)            | `string`      | (query)    |
+| `dataInicial`       | Data Inicial do Envio (Opcional)       | `string`      | (query)    |
+| `dataFinal`         | Data Final do Envio (Opcional)         | `string`      | (query)    |
 
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-  ```json
-  {
-    "campanhaId": 0,
-    "customId": "string",
-    "nomeCampanha": "string",
-    "status": "string",
-    "dataEnvio": "2024-10-31T20:51:50.981Z",
-    "mensagens": [
+```json
+ [
       {
-        "customId": "string",
+        "campanhaId": 0,
+        "nomeCampanha": "string",
+        "campaigncustomId": "string",
+        "msgcustomId": "string",
         "contato": "string",
         "status": "string",
         "direction": "string",
         "mensagem": "string",
-        "dataEnvio": "2024-10-31T20:51:50.981Z"
+        "dataEnvio": "2024-10-31T19:49:24.641Z"
       }
-    ]
-  }
+]
   ```
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
   ```json
@@ -392,6 +388,7 @@ Formato `application/json`:
 |---------------------|----------------------------------------|---------------|
 | `customId`          | Id Customizado para identificação      | Não           |
 | `nome`              | Nome da Campanha                       | Sim           |
+| `TelefoneRemetente` | Telefone do remetente da mensagem      | Sim           |
 | `mensagens`         | Lista de Mensagens a serem enviadas    | Sim           |
 
 ### Propriedades das Mensagens
@@ -400,14 +397,14 @@ Formato `application/json`:
 |---------------------|----------------------------------------|---------------|
 | `customId`          | Id Customizado para identificação      | Não           |
 | `corpo`             | TemplateId cadastrado                  | Sim           |
-| `contatoDestino`    | Endereço de E-mail do Destinatário     | Sim           |
+| `contatoDestino`    | Telefone do Destinatário               | Sim           |
 | `variaveis`         | Variáveis do template se houver        | Não           |
 
 ### Propriedades das Variáveis
 
 | **Propriedade**     | **Descrição**                          | **Requerido** |
 |---------------------|----------------------------------------|---------------|
-| `key`               | Nome da variável                       | Não           |
+| `key`               | Nome da variável                       | Sim           |
 | `value`             | Valor da variável                      | Sim           |
 
 ### Exemplo de Corpo da Requisição
@@ -418,6 +415,7 @@ Formato `application/json`:
 {
   "customId": "string",
   "nome": "string",
+  "TelefoneRemetente": "string",
   "mensagens": [
     {
       "customId": "string",
@@ -488,33 +486,31 @@ Formato `application/json`:
 
 | **Nome**            | **Descrição**                          | **Tipo**      | **Local**  |
 |---------------------|----------------------------------------|---------------|------------|
-| `page`              | Página buscada                        | `integer`     | (path)     |
+| `page`              | Página buscada                         | `integer`     | (path)     |
 | `pageSize`          | Quantidade de dados retornados         | `integer`     | (query)    |
-| `nomeCampanha`      | Nome da campanha (Opcional)           | `string`      | (query)    |
-| `dataInicial`       | Data Inicial do Envio (Opcional)      | `string`      | (query)    |
-| `dataFinal`         | Data Final do Envio (Opcional)        | `string`      | (query)    |
+| `campaigncustomId`  | customid da campanha (Opcional)        | `string`      | (query)    |
+| `msgcustomId`       | customid da mensagem (Opcional)        | `string`      | (query)    |
+| `nomeCampanha`      | Nome da campanha (Opcional)            | `string`      | (query)    |
+| `dataInicial`       | Data Inicial do Envio (Opcional)       | `string`      | (query)    |
+| `dataFinal`         | Data Final do Envio (Opcional)         | `string`      | (query)    |
 
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-  ```json
-  {
-    "campanhaId": 0,
-    "customId": "string",
-    "nomeCampanha": "string",
-    "status": "string",
-    "dataEnvio": "2024-10-31T22:05:51.094Z",
-    "mensagens": [
+```json
+ [
       {
-        "customId": "string",
+        "campanhaId": 0,
+        "nomeCampanha": "string",
+        "campaigncustomId": "string",
+        "msgcustomId": "string",
         "contato": "string",
         "status": "string",
         "direction": "string",
         "mensagem": "string",
-        "dataEnvio": "2024-10-31T22:05:51.094Z"
+        "dataEnvio": "2024-10-31T19:49:24.641Z"
       }
-    ]
-  }
+]
   ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
