@@ -164,19 +164,26 @@ Formato `application/json`:
 
 - **200 OK**: Solicitação bem-sucedida.
 ```json
- [
-      {
-        "campanhaId": 0,
-        "nomeCampanha": "string",
-        "campaigncustomId": "string",
-        "msgcustomId": "string",
-        "contato": "string",
-        "status": "string",
-        "direction": "string",
-        "mensagem": "string",
-        "dataEnvio": "2024-10-31T19:49:24.641Z"
-      }
-]
+
+{
+  "PageIndex": 0,
+  "TotalPages": 0,
+  "Source": [
+    {
+      "campanhaId": 0,
+      "campaignCustomId": "string",
+      "nomeCampanha": "string",
+      "msgCustomId": "string",
+      "contato": "string",
+      "status": "string",
+      "direction": "string",
+      "mensagem": "string",
+      "dataEnvio": "2024-11-02T00:30:46.671Z"
+    }
+  ],
+  "HasPreviousPage": true,
+  "HasNextPage": true
+}
   ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
@@ -325,19 +332,26 @@ Formato `application/json`:
 
 - **200 OK**: Solicitação bem-sucedida.
 ```json
- [
-      {
-        "campanhaId": 0,
-        "nomeCampanha": "string",
-        "campaigncustomId": "string",
-        "msgcustomId": "string",
-        "contato": "string",
-        "status": "string",
-        "direction": "string",
-        "mensagem": "string",
-        "dataEnvio": "2024-10-31T19:49:24.641Z"
-      }
-]
+
+{
+  "PageIndex": 0,
+  "TotalPages": 0,
+  "Source": [
+    {
+      "campanhaId": 0,
+      "campaignCustomId": "string",
+      "nomeCampanha": "string",
+      "msgCustomId": "string",
+      "contato": "string",
+      "status": "string",
+      "direction": "string",
+      "mensagem": "string",
+      "dataEnvio": "2024-11-02T00:30:46.671Z"
+    }
+  ],
+  "HasPreviousPage": true,
+  "HasNextPage": true
+}
   ```
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
   ```json
@@ -498,19 +512,26 @@ Formato `application/json`:
 
 - **200 OK**: Solicitação bem-sucedida.
 ```json
- [
-      {
-        "campanhaId": 0,
-        "nomeCampanha": "string",
-        "campaigncustomId": "string",
-        "msgcustomId": "string",
-        "contato": "string",
-        "status": "string",
-        "direction": "string",
-        "mensagem": "string",
-        "dataEnvio": "2024-10-31T19:49:24.641Z"
-      }
-]
+
+{
+  "PageIndex": 0,
+  "TotalPages": 0,
+  "Source": [
+    {
+      "campanhaId": 0,
+      "campaignCustomId": "string",
+      "nomeCampanha": "string",
+      "msgCustomId": "string",
+      "contato": "string",
+      "status": "string",
+      "direction": "string",
+      "mensagem": "string",
+      "dataEnvio": "2024-11-02T00:30:46.671Z"
+    }
+  ],
+  "HasPreviousPage": true,
+  "HasNextPage": true
+}
   ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
