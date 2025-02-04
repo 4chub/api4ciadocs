@@ -4,6 +4,9 @@ Esta documentação detalha os endpoints da API relacionados a login e envio de 
 
 ---
 
+### **URL DE REQUISIÇÃO** `https://api.4ciweb.com/api/`
+
+---
 
 
 
