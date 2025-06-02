@@ -490,6 +490,14 @@ Formato `application/json`:
   ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
+---
+## Endpoint de Consulta de Template Whatsapp
+
+### **GET** `/api/templatesid`
+
+- **200 OK**: Solicitação bem-sucedida.
+
+- **400 Bad Request**: Ocorreu uma falha durante a solicitação.
 
 ---
 
