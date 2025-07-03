@@ -414,7 +414,7 @@ Formato `application/json`:
 |---------------------|----------------------------------------|---------------|
 | `customId`          | Id Customizado para identificação      | Não           |
 | `templateid`        | Id Customizado para template           | Sim           |
-| `corpo`             | TemplateId cadastrado                  | Sim           |
+| `corpo`             | Resumo da mensagem                     | Sim           |
 | `contatoDestino`    | Telefone do Destinatário               | Sim           |
 | `variaveis`         | Variáveis do template se houver        | Sim           |
 
