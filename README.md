@@ -413,9 +413,10 @@ Formato `application/json`:
 | **Propriedade**     | **Descrição**                          | **Requerido** |
 |---------------------|----------------------------------------|---------------|
 | `customId`          | Id Customizado para identificação      | Não           |
+| `templateid`        | Id Customizado para template           | Sim           |
 | `corpo`             | TemplateId cadastrado                  | Sim           |
 | `contatoDestino`    | Telefone do Destinatário               | Sim           |
-| `variaveis`         | Variáveis do template se houver        | Não           |
+| `variaveis`         | Variáveis do template se houver        | Sim           |
 
 ### Propriedades das Variáveis
 
@@ -423,6 +424,16 @@ Formato `application/json`:
 |---------------------|----------------------------------------|---------------|
 | `key`               | Nome da variável                       | Sim           |
 | `value`             | Valor da variável                      | Sim           |
+
+### De-Para de variáveis
+
+| **Variável**           | **Informação**                      |
+|------------------------|-------------------------------------|
+| `-var1-`               | Nome                                |
+| `-var2-`               | Código de Barras                    |
+| `-var3-`               | Vencimento                          |
+| `-var4-`               | Valor                               |
+| `-var5-`               | Extra                               |
 
 ### Exemplo de Corpo da Requisição
 
