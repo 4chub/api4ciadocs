@@ -111,7 +111,7 @@ Formato `application/json`:
 
 ---
 
-## Endpoint de Relatório de Campanha
+## Endpoint de Relatório de Campanha de E-mail
 
 ### **GET** `/api/Email/Relatorio/Pagina/{page}`
 
