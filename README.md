@@ -65,7 +65,7 @@ Formato `application/json`:
 | `nomeRemetente`     | Nome do Remetente do E-mail            | Sim           |
 | `remetente`         | Endereço de E-mail do Remetente        | Sim           |
 | `assunto`           | Assunto do E-mail                      | Sim           |
-| `customId`          | Id Customizado para identificação      | Não           |
+| `customId`          | Id Customizado para identificação      | Sim           |
 | `nome`              | Nome da Campanha                       | Sim           |
 | `mensagens`         | Lista de Mensagens a serem enviadas    | Sim           |
 
@@ -88,6 +88,7 @@ Formato `application/json`:
   "assunto": "string",
   "customId": "string",
   "nome": "string",
+
   "mensagens": [
     {
       "customId": "string",
@@ -101,49 +102,14 @@ Formato `application/json`:
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-  ```json
-  {
-    "nomeCampanha": "string",
-    "idCampanha": 0,
-    "customId": "string",
-    "mensagens": [
-      "string"
-    ]
-  }
-  ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
-```json
-  {
-    "nomeCampanha": "string",
-    "idCampanha": 0,
-    "customId": "string",
-    "mensagens": [
-      "string"
-    ]
-  }
-  ```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
-```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
 
 ---
-
-
-
 
 ## Endpoint de Relatório de Campanha
 
@@ -166,63 +132,14 @@ Formato `application/json`:
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-```json
-
-{
-  "PageIndex": 0,
-  "TotalPages": 0,
-  "Source": [
-    {
-      "campanhaId": 0,
-      "campaignCustomId": "string",
-      "nomeCampanha": "string",
-      "msgCustomId": "string",
-      "contato": "string",
-      "status": "string",
-      "direction": "string",
-      "mensagem": "string",
-      "dataEnvio": "2024-11-02T00:30:46.671Z"
-    }
-  ],
-  "HasPreviousPage": true,
-  "HasNextPage": true
-}
-  ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
-```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
-```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
 
 ---
-
-
-
 
 ## Endpoint de Envio de SMS
 
@@ -236,7 +153,7 @@ Formato `application/json`:
 
 | **Propriedade**     | **Descrição**                          | **Requerido** |
 |---------------------|----------------------------------------|---------------|
-| `customId`          | Id Customizado para identificação      | Não           |
+| `customId`          | Id Customizado para identificação      | Sim           |
 | `nome`              | Nome da Campanha                       | Sim           |
 | `mensagens`         | Lista de Mensagens a serem enviadas    | Sim           |
 
@@ -257,7 +174,7 @@ Formato `application/json`:
   "customId": "string",
   "nome": "string",
   "mensagens": [
-    {
+        {
       "customId": "string",
       "corpo": "string",
       "contatoDestino": "string"
@@ -269,49 +186,14 @@ Formato `application/json`:
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-  ```json
-  {
-    "nomeCampanha": "string",
-    "idCampanha": 0,
-    "customId": "string",
-    "mensagens": [
-      "string"
-    ]
-  }
-  ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
-  ```json
-  {
-    "nomeCampanha": "string",
-    "idCampanha": 0,
-    "customId": "string",
-    "mensagens": [
-      "string"
-    ]
-  }
-  ```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
-  ```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
 
 ---
-
-
-
 
 ## Endpoint de Relatório de Campanha de SMS
 
@@ -334,62 +216,14 @@ Formato `application/json`:
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-```json
 
-{
-  "PageIndex": 0,
-  "TotalPages": 0,
-  "Source": [
-    {
-      "campanhaId": 0,
-      "campaignCustomId": "string",
-      "nomeCampanha": "string",
-      "msgCustomId": "string",
-      "contato": "string",
-      "status": "string",
-      "direction": "string",
-      "mensagem": "string",
-      "dataEnvio": "2024-11-02T00:30:46.671Z"
-    }
-  ],
-  "HasPreviousPage": true,
-  "HasNextPage": true
-}
-  ```
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
-  ```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
-  ```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
 
 ---
-
-
-
 
 ## Endpoint de Envio de WhatsApp
 
@@ -403,9 +237,9 @@ Formato `application/json`:
 
 | **Propriedade**     | **Descrição**                          | **Requerido** |
 |---------------------|----------------------------------------|---------------|
-| `customId`          | Id Customizado para identificação      | Não           |
+| `customId`          | Id Customizado para identificação      | Sim           |
 | `nome`              | Nome da Campanha                       | Sim           |
-| `remetente`         | Telefone do remetente da mensagem      | Sim           |
+| `templateId`        | Template da mensagem enviada           | Sim           |
 | `mensagens`         | Lista de Mensagens a serem enviadas    | Sim           |
 
 ### Propriedades das Mensagens
@@ -413,7 +247,6 @@ Formato `application/json`:
 | **Propriedade**     | **Descrição**                          | **Requerido** |
 |---------------------|----------------------------------------|---------------|
 | `customId`          | Id Customizado para identificação      | Não           |
-| `templateid`        | Id Customizado para template           | Sim           |
 | `corpo`             | Resumo da mensagem                     | Sim           |
 | `contatoDestino`    | Telefone do Destinatário               | Sim           |
 | `variaveis`         | Variáveis do template se houver        | Sim           |
@@ -442,8 +275,8 @@ Formato `application/json`:
 ```json
 {
   "customId": "string",
+  "templateId": "string",
   "nome": "string",
-  "remetente": "string",
   "mensagens": [
     {
       "customId": "string",
@@ -451,54 +284,27 @@ Formato `application/json`:
       "contatoDestino": "string",
       "variaveis": [
         {
-          "key": "string",
+          "key": "-var1-",
+          "value": "string"
+        },
+        {
+          "key": "-var2-",
           "value": "string"
         }
       ]
     }
   ]
 }
+
 ```
 
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-  ```json
-  {
-    "nomeCampanha": "string",
-    "idCampanha": 0,
-    "customId": "string",
-    "mensagens": [
-      "string"
-    ]
-  }
-  ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
-  ```json
-  {
-    "nomeCampanha": "string",
-    "idCampanha": 0,
-    "customId": "string",
-    "mensagens": [
-      "string"
-    ]
-  }
-  ```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
-  ```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
 ---
@@ -533,56 +339,10 @@ Formato `application/json`:
 ### Respostas
 
 - **200 OK**: Solicitação bem-sucedida.
-```json
-
-{
-  "PageIndex": 0,
-  "TotalPages": 0,
-  "Source": [
-    {
-      "campanhaId": 0,
-      "campaignCustomId": "string",
-      "nomeCampanha": "string",
-      "msgCustomId": "string",
-      "contato": "string",
-      "status": "string",
-      "direction": "string",
-      "mensagem": "string",
-      "dataEnvio": "2024-11-02T00:30:46.671Z"
-    }
-  ],
-  "HasPreviousPage": true,
-  "HasNextPage": true
-}
-  ```
 
 - **400 Bad Request**: Ocorreu uma falha durante a solicitação.
-  ```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **401 Unauthorized**: Não logado ou sem privilégios.
-  ```json
-  {
-    "type": "string",
-    "title": "string",
-    "status": 0,
-    "detail": "string",
-    "instance": "string",
-    "additionalProp1": "string",
-    "additionalProp2": "string",
-    "additionalProp3": "string"
-  }
-  ```
 
 - **403 Forbidden**: Acesso ao recurso é proibido.
 
