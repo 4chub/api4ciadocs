@@ -646,7 +646,7 @@ Formato `application/json`:
 
 ## Endpoint de Relatório de Campanha de URA
 
-### **GET** `/api/SMS/Relatorio/Pagina/{page}`
+### **GET** `/api/URA/Relatorio/Pagina/{page}`
 
 **Descrição:** Obtém o relatório de envio de uma campanha de URA.
 
@@ -673,3 +673,106 @@ Formato `application/json`:
 - **403 Forbidden**: Acesso ao recurso é proibido.
 
 ---
+
+## Endpoint de Envio de RCS
+
+### **POST** `/api/RCS/Send`
+
+**Descrição:** Envia uma campanha de RCS.
+
+**Autenticação:** A autenticação é feita por Bearer token. Para obtê-lo, é necessário efetuar login através do endpoint `/api/Login`.
+
+### Propriedades da Campanha
+
+| **Propriedade**     | **Descrição**                          | **Requerido** |
+|---------------------|----------------------------------------|---------------|
+| `customId`          | Id Customizado para identificação      | Sim           |
+| `templateId`        | Template utilizado para a campanha     | Sim           |
+| `nome`              | Nome da Campanha                       | Sim           |
+| `mensagens`         | Lista de Mensagens a serem enviadas    | Sim           |
+| `fallbacks`         | Fallback a ser enviado                 | Sim           |
+
+### Propriedades das Mensagens
+
+| **Propriedade**     | **Descrição**                          | **Requerido** |
+|---------------------|----------------------------------------|---------------|
+| `customId`          | Id Customizado para identificação      | Sim           |
+| `contatoDestino`    | Telefone do Destinatário               | Sim           |
+| `variaveis`         | Variáveis utilizados no template       | Não           |
+
+### Propriedades do Fallback
+
+| **Propriedade**     | **Descrição**                          | **Requerido** |
+|---------------------|----------------------------------------|---------------|
+| `templateId`          | ID do Fallback correspondente        | Sim           |
+
+### Exemplo de Corpo da Requisição
+
+Formato `application/json`:
+
+```json
+{
+  "customId": "string",
+  "templateId": "string",
+  "nome": "string",
+  "mensagens": [
+    {
+      "customId": "string",
+      "contatoDestino": "string",
+      "variaveis": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ]
+    }
+  ],
+  "fallbacks": [
+    {
+      "templateId": "string"
+    }
+  ]
+}
+```
+
+### Respostas
+
+- **200 OK**: Solicitação bem-sucedida.
+
+- **400 Bad Request**: Ocorreu uma falha durante a solicitação.
+
+- **401 Unauthorized**: Não logado ou sem privilégios.
+
+- **403 Forbidden**: Acesso ao recurso é proibido.
+
+---
+
+
+## Endpoint de Relatório de Campanha de RCS
+
+### **GET** `/api/RCS/Relatorio/Pagina/{page}`
+
+**Descrição:** Obtém o relatório de envio de uma campanha de RCS.
+
+### Parâmetros
+
+| **Nome**            | **Descrição**                                           | **Tipo**      | **Local**  |
+|---------------------|---------------------------------------------------------|---------------|------------|
+| `page`              | Página buscada                                          | `integer`     | (path)     |
+| `pageSize`          | Quantidade de dados retornados (Opcional, padrão: 1000) | `integer`     | (query)    |
+| `campaigncustomId`  | customid da campanha (Opcional)                         | `string`      | (query)    |
+| `msgcustomId`       | customid da mensagem (Opcional)                         | `string`      | (query)    |
+| `nomeCampanha`      | Nome da campanha (Opcional)                             | `string`      | (query)    |
+| `dataInicial`       | Data Inicial do Envio (Opcional)                        | `string`      | (query)    |
+| `dataFinal`         | Data Final do Envio (Opcional)                          | `string`      | (query)    |
+
+### Respostas
+
+- **200 OK**: Solicitação bem-sucedida.
+
+- **400 Bad Request**: Ocorreu uma falha durante a solicitação.
+
+- **401 Unauthorized**: Não logado ou sem privilégios.
+
+- **403 Forbidden**: Acesso ao recurso é proibido.
+
