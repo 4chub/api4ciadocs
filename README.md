@@ -592,7 +592,7 @@ Formato `application/json`:
 
 ### **POST** `/api/URA/Send`
 
-**Descrição:** Envia uma campanha de SMS.
+**Descrição:** Envia uma campanha de URA.
 
 **Autenticação:** A autenticação é feita por Bearer token. Para obtê-lo, é necessário efetuar login através do endpoint `/api/Login`.
 
